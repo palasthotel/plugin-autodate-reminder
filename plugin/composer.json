@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Palasthotel\\WordPress\\PluginUpdateCheck\\": "classes"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "ext-curl": "*"
+  }
+}
