@@ -70,19 +70,8 @@ class Schedule extends Component {
 		foreach ( $list as $plugin ) {
 			$description .= "- [ ] **$plugin->name** $plugin->currentVersion -> $plugin->latestVersion \n";
 		}
-
-		$description .= "\n\n---\n\n";
-		$description .= "- [ ] Merge Request für Ticket erstellen
-- [ ] Updates lokal einspielen
-- [ ] Updates lokal testen
-- [ ] Ggf. Übersetzungen aktualisieren & committen
-- [ ] Updates committen & branch in `stage` mergen
-- [ ] Updates auf die Stage ausrollen
-- [ ] Updates auf Stage testen
-- [ ] Merge Request in `main` mergen
-- [ ] Updates auf Production ausrollen
-- [ ] Updates auf Production testen";
-
+		$description .= PLUGIN_UPDATE_CHECK_TICKET_DESCRIPTION_SUFFIX;
+  
 		$userId = 0;
 		if(!empty(PLUGIN_UPDATE_CHECK_GITLAB_ASSIGNEE_USERNAME)){
 			$userId = $this->plugin->gitlab->getUserId(
